@@ -39,7 +39,7 @@ class FaqAdminView(APIView):
 
     def patch(self, request, faq_id=None):
         if faq_id is None:
-            return Response(msg_error, status=status.HTTP_400_BAD_REQUEST)
+            return Response(msg_error, status=status.HTTP_400_BAD_REQUEST_none_id)
         faq = get_faq(faq_id)
         data = request.data
         obj = {
